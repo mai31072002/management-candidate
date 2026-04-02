@@ -40,8 +40,12 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v5
       with:
-        # Context là dấu chấm (.) - nghĩa là ngay tại thư mục hiện tại
-        context: .
-        file: ./Dockerfile
+        # 1. Context: Folder chứa code để build (Backend)
+        context: ./candidate-backend
+        
+        # 2. File: Đường dẫn chính xác tới file Dockerfile
+        file: ./candidate-backend/Dockerfile
+        
+        # 3. Đẩy lên Docker Hub
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/employee-be:latest
