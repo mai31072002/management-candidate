@@ -1,0 +1,25 @@
+.position-page {
+    margin-bottom: 20px;
+    .position-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-candidate .search-filter .ant-select {
+        width: 100%;
+        padding: 0 10px 10px;
+    }
+}
+
+.lever-page {
+    margin-bottom: 20px;
+    .lever-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-candidate .search-filter .ant-select {
+        width: 100%;
+        padding: 0 10px 10px;
+    }
+}

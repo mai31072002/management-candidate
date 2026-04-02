@@ -1,0 +1,12 @@
+.department-page {
+    margin-bottom: 20px;
+    .department-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-candidate .search-filter .ant-select {
+        width: 100%;
+        padding: 0 10px 10px;
+    }
+}

@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff
+}
+
+.model-from {
+    height: 75vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.page-base {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.main-layout {
+    padding: 0px 16px;
+    background: #112A45;
+}
+
+.main-layout-content {
+    border-left: 5px dotted darkgray;
+}
+
+.model-from {
+    padding: 0 10px;
+}

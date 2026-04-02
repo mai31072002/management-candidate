@@ -1,0 +1,52 @@
+# ============ GRADLE CACHE ============
+# Gradle build cache - không cần copy vào Docker image
+.gradle
+build
+.gradle-wrapper.properties
+
+# ============ IDE FILES ============
+# Configuration files của IDE
+.idea
+*.iml
+*.ipr
+*.iws
+.vscode
+
+# ============ GIT FILES ============
+# Git metadata
+.git
+.gitignore
+README.md
+
+# ============ LOGS ============
+# Log files
+*.log
+logs/
+
+# ============ OPERATING SYSTEM ============
+# System files
+.DS_Store
+Thumbs.db
+
+# ============ TEMPORARY FILES ============
+# Temporary files
+.tmp
+temp
+*.tmp
+
+# ============ TEST REPORTS ============
+# Test reports và coverage
+reports/
+test-results/
+build/reports/
+
+# ============ APPLICATION PROPERTIES ============
+# Sensitive configuration files
+application-production.properties
+application-local.properties
+
+# ============ DOCKER FILES ============
+# Docker related files (không cần nested)
+Dockerfile*
+docker-compose*
+.dockerignore

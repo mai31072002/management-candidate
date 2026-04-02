@@ -1,0 +1,112 @@
+.dashboard-page {
+    .dashboard-table-not-found {
+        text-align: center;
+        padding: 50px;
+        color: #888;
+    }
+    .dashboard-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .header-candidate .search-filter .ant-select {
+        width: 100%;
+        padding: 0 10px 10px;
+    }
+}
+
+.form-grid {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.attendance-calendar {
+    .events {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .events .ant-badge-status {
+        width: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .notes-month {
+        font-size: 28px;
+        text-align: center;
+    }
+    .notes-month section {
+        font-size: 28px;
+    }
+
+    .ant-picker-calendar-date-value {
+        text-align: start;
+    }
+
+    .ant-picker-panel {
+        text-align: justify !important;
+    }
+
+    .ant-radio-group {
+        display: none;
+    }
+
+    .attendance-calendar-content {
+        text-align: center; 
+        padding: 10px;
+
+        .attendance-calendar-content-time {
+            margin-top: 2px;
+        }
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+        .attendance-calendar-content {
+            font-size: 11px;
+        }
+
+        .attendance-calendar-content .ant-tag {
+            font-size: 11px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .attendance-calendar-content {
+            font-size: 10px;
+        }
+
+        .attendance-calendar-content .ant-tag {
+            font-size: 10px;
+        }
+    }
+}
+
+.otTop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+
+    .ot-data-picker {
+        margin-right: 10px;
+    }
+}
+
+.reward-penalty {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+
+    .reward-penalty-picker {
+        margin-right: 10px;
+    }
+    .reward-penalty-select {
+        margin-right: 10px;
+    }
+}

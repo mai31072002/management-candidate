@@ -1,0 +1,117 @@
+text
+# Project Context
+Dự án fullstack tuyển dụng với 2 phần độc lập:
+- Backend: Java Spring Boot (/candidate-backend) - xử lý Backend của dự án
+- Frontend: React 18+ (/employee-frontend) - Frontend xử lý UI dashboard cho employee.
+
+# Docs Hierarchy (MANDATORY REFERENCE)
+- TRƯỚC KHI VIẾT CODE: Luôn đọc `/docs-ai/` trước:
+
+/docs-ai/
+├───backend
+│   ├───technology
+│           └───technology.md # Các Công nghệ sử dụng trong Backend mặc định
+│           └───tecknology-new.md # Các Công nghệ sử dụng trong Backend mới AI cập nhật vào đây
+└───frontend
+│    ├───technology
+│            └───technology.md # Các Công nghệ sử dụng trong Backend mặc định
+│            └───tecknology-new.md # Các Công nghệ sử dụng trong Backend mới AI cập nhật vào đây
+└───srs
+    └───srs.md # Tài liệu đặc tả yêu cầu phần mềm (SRS)
+    └───srs-new.md # Tài liệu đặc tả yêu cầu phần mềm (SRS) mới AI cập nhật vào đây
+
+- Quy trình Đọc SRS -> backend -> frontend -> code
+
+# Core Rules (STRICT ENFORCEMENT)
+## 1. Tech Stack
+
+Backend (/candidate-backend):
+
+    Java 17+, Spring Boot 3.2+, JPA/Hibernate, Spring Security JWT
+
+    Maven/Gradle, DTO pattern, Repository-Service-Controller
+
+Frontend (/employee-frontend):
+
+    React 18 functional components + Hooks chỉ
+
+    Redux Toolkit (createSlice, RTK Query), Ant Design 5.x
+
+    TypeScript strict, Yarn workspaces
+
+text
+
+## 2. API Contract (CRITICAL)
+
+RESTful + OpenAPI:
+
+    GET /api/candidates → 200 OK, paginated
+
+    POST /api/candidates → 201 Created
+
+    PUT /api/candidates/{id} → 200 OK
+
+    DELETE /api/candidates/{id} → 204 No Content
+
+    Error: 400 Bad Request, 404 Not Found, 500 Internal Server Error
+
+DTO Sync Rule: Thay đổi BE DTO → TỰ ĐỘNG cập nhật FE types/ src/types/
+
+text
+
+## 3. Code Style (Auto-format)
+
+Backend: PascalCase (Class), camelCase (method/field), snake_case (DB)
+Frontend: PascalCase (Component), camelCase (hooks/vars)
+
+Clean Code:
+
+    Functions < 30 lines
+
+    Comment business logic phức tạp chỉ
+
+    No console.log in production
+
+text
+
+## 4. Type Safety (NON-NEGOTIABLE)
+
+BE → FE sync:
+
+    Thay đổi Entity/DTO ở BE
+
+    Copy schema → src/types/candidate.types.ts
+
+    Update RTK Query hooks
+
+    List files cần update ở output
+
+text
+
+## 5. Workflow Enforcement
+
+MỖI TASK:
+
+    Đọc relevant /docs-ai/{backend|frontend}/{technology|srs}/
+
+    Plan → Code → Test → Explain changes
+
+    Nếu cross-stack: Ghi rõ BE+FE impact
+
+Output format:
+
+text
+## Thay đổi Backend
+- File: CandidateController.java [+5 lines]
+- Logic: Thêm validation @Valid
+
+## Frontend Impact  
+CẦN UPDATE:
+- src/types/candidate.types.ts
+- src/services/candidateApi.ts 
+
+text
+
+# Output Requirement
+- Luôn giải thích ngắn gọn các thay đổi vừa thực hiện.
+- Nếu việc sửa BE làm ảnh hưởng đến FE, hãy liệt kê các file FE cần cập nhật.

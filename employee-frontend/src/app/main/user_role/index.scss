@@ -1,0 +1,21 @@
+.user-role-page {
+    margin-bottom: 20px;
+    .user-role-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-candidate .search-filter .ant-select {
+        width: 100%;
+        padding: 0 10px 10px;
+    }
+}
+
+.role-management-page {
+    .role-management-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+}

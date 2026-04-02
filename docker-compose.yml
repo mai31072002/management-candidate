@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend-app:
+    build: ./candidate-backend
+    container_name: spring-backend
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5433/candidate
+      - SPRING_DATA_REDIS_HOST=host.docker.internal
+    # Đảm bảo backend luôn khởi động lại nếu lỗi
+    restart: always
+
+  frontend-app:
+    build: ./employee-frontend
+    container_name: react-frontend
+    ports:
+      - "3000:80"
+    # Frontend chỉ chạy sau khi Backend đã sẵn sàng
+    depends_on:
+      - backend-app
+    restart: always

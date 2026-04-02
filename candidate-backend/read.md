@@ -1,0 +1,33 @@
+### Mô tả dự án: Quản lý công nhân cho 1 công ty
+- Dự án quản lý công nhân cho một công ty
+  - Đối tượng positionJob
+    - Các chức vụ : inter(thực tập), Manager(Trưởng phòng), teamLeader(trưởng nhóm), Specialist (nhân viên)
+    - Thuộc tính : positionId, namePosition
+  - Đối tượng candidate 
+    - Thuộc tính: candidateId, firstName, lastName, fullName, birthday, cccd, location, province, district, address, age, email, candidateCode
+  - Đối tượng Công ty
+    - companyId, nameCompany, province(Tỉnh), district(quận), address(địa chỉ)
+  - Đối tượng user
+    -userId, username, firstName, lastName, password
+  - Đối tượng role :
+    - roleId, nameRole, description
+  - Đối tượng permission
+    - permissionId, namePermission. description
+  - EntityBase
+    - createAt, updateAt, version, isDelete
+  - Chức năng: các API
+    - Quản lý phân quyền qua user - role - permission
+    - Đăng nhập, đăng ký tài khoản (Admin: quản trị viên, User: Nhân viên), 
+    - thêm công nhân mới, 
+    - cập nhật công nhân, 
+    - xóa công nhân, 
+    - lấy ra danh sách công nhân (có pagination)
+    - Tìm kiếm công nhân
+  - Công nghệ:
+    - Spring Boot
+    - Mã hóa password bằng BCrypt
+    - Spring Security + oauth2 + JWT
+    - JPA + postgreSQL 
+    - validation
+    - Lombok
+

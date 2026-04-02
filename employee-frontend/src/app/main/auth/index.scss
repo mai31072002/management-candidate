@@ -1,0 +1,23 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+
+    .login-card {
+        max-width: 360; 
+        border-radius: 10;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+
+        .login-title {
+            text-align: center; 
+            margin-bottom: 24;
+        }
+
+        .login_form.login-submit {
+            background: #4a90e2;
+            border-color: #4a90e2;
+        }
+    }
+}

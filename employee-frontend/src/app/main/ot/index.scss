@@ -1,0 +1,12 @@
+.ot-date-page {
+    .otTop {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 10px 0;
+
+        .ot-data-picker {
+            margin-right: 10px;
+        }
+    }
+}
