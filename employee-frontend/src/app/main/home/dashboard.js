@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Actions from "./store/actions";
@@ -100,9 +100,13 @@ const Dashboard = () => {
     // HENDLERS
     // ---------------------------------
 
-    const refreshList = (pageNumber = 1, pageSize = limit || 10) => {
-        dispatch(Actions.fetchListEmployee(pageNumber - 1, pageSize));
-    };
+    
+    const refreshList = useCallback(
+        (pageNumber = 1, pageSize = limit || 10) => {
+            dispatch(Actions.fetchListEmployee(pageNumber - 1, pageSize));
+        },
+        [dispatch, limit]
+    );
 
     const refreshSearch = (pageNumber = 1, pageSize = limit || 10) => {
         dispatch(Actions.fetchSearchEmployee( searchTerm.trim(), pageNumber - 1, pageSize));

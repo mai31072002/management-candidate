@@ -5,15 +5,15 @@ spring:
   servlet:
     contextPath:
   datasource:
-#    url: jdbc:postgresql://localhost:5433/candidate
+    url: jdbc:postgresql://localhost:5433/candidate
 #    url: jdbc:postgresql://host.docker.internal:5433/candidate
-#    username: postgres
-#    password: chienon@123
-#    driverClassName: org.postgresql.Driver
-    url: ${SPRING_DATASOURCE_URL:postgresql://postgres:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV@postgres.railway.internal:5432/railway}
-    username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV}
+    username: postgres
+    password: chienon@123
     driverClassName: org.postgresql.Driver
+#    url: ${SPRING_DATASOURCE_URL:postgresql://postgres:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV@postgres.railway.internal:5432/railway}
+#    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+#    password: ${SPRING_DATASOURCE_PASSWORD:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV}
+#    driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
