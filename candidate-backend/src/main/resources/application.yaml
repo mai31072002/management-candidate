@@ -10,9 +10,9 @@ spring:
 #    username: postgres
 #    password: chienon@123
 #    driverClassName: org.postgresql.Driver
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.vnehhhbygyxigjckivbj.supabase.co:5432/postgres}
+    url: ${SPRING_DATASOURCE_URL:postgresql://postgres:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV@postgres.railway.internal:5432/railway}
     username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:Chienon@3107}
+    password: ${SPRING_DATASOURCE_PASSWORD:rdlBlTKmpgJLCKddYtEaLomjbfQUexYV}
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
