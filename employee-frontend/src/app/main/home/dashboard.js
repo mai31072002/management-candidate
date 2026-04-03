@@ -43,6 +43,13 @@ const Dashboard = () => {
     // USEEFFECT
     // ---------------------------------
 
+    const refreshList = useCallback(
+        (pageNumber = 1, pageSize = limit || 10) => {
+            dispatch(Actions.fetchListEmployee(pageNumber - 1, pageSize));
+        },
+        [dispatch, limit]
+    );
+
     useEffect(() => {
         dispatch(Actions.fetchListEmployee(0, 10));
         dispatch(Actions.fetchListPosition());
@@ -99,14 +106,6 @@ const Dashboard = () => {
     // ---------------------------------
     // HENDLERS
     // ---------------------------------
-
-    
-    const refreshList = useCallback(
-        (pageNumber = 1, pageSize = limit || 10) => {
-            dispatch(Actions.fetchListEmployee(pageNumber - 1, pageSize));
-        },
-        [dispatch, limit]
-    );
 
     const refreshSearch = (pageNumber = 1, pageSize = limit || 10) => {
         dispatch(Actions.fetchSearchEmployee( searchTerm.trim(), pageNumber - 1, pageSize));
