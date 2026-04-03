@@ -94,7 +94,7 @@ const Dashboard = () => {
             setIsSearching(false);
             refreshList(1, limit);
         }
-    }, [debouncedSearchTerm, dispatch]);
+    }, [debouncedSearchTerm, limit, t, refreshList, dispatch]);
 
     // ---------------------------------
     // HENDLERS

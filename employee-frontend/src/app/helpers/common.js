@@ -1,5 +1,4 @@
-import React, { useMemo } from "react";
-import { message, Tag } from "antd";
+import { message } from "antd";
 
 export const notificationPopup = (status, text) => {
     if (status === 200) {

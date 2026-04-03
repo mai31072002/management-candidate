@@ -13,7 +13,6 @@ const initialState = {
         totalElement: 0,
         status: null,
         otDate: [],
-        status: null,
         message: "",
     },
     createOrUpdateOt: null,

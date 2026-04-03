@@ -6,7 +6,7 @@ import "perfect-scrollbar/css/perfect-scrollbar.css";
 import { Layout } from 'antd';
 import Header from 'components/Header/header';
 import Sidebar from 'components/Sidebar/sidebar';
-import Footer from 'components/Footer/footer';
+// import Footer from 'components/Footer/footer';
 import './admin.scss';
 
 const { Content } = Layout;
