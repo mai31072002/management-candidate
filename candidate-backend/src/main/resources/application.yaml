@@ -6,9 +6,13 @@ spring:
     contextPath:
   datasource:
 #    url: jdbc:postgresql://localhost:5433/candidate
-    url: jdbc:postgresql://host.docker.internal:5433/candidate
-    username: postgres
-    password: chienon@123
+#    url: jdbc:postgresql://host.docker.internal:5433/candidate
+#    username: postgres
+#    password: chienon@123
+#    driverClassName: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.vnehhhbygyxigjckivbj.supabase.co:5432/postgres}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:Chienon@3107}
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
